@@ -1,0 +1,72 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-styles/typography.html">
+
+<dom-module id="score-pad">
+  <template>
+    <style include="shared-styles">
+      :host {
+        @apply(--layout-vertical);
+        @apply(--layout-flex);
+        display: block;
+        --pad-background-color: white;
+      }
+
+      paper-card {
+        --paper-card-background-color: var(--pad-background-color);
+        @apply(--layout-flex);
+        @apply(--layout-horizontal);
+      }
+
+      div#counter {
+        @apply(--layout-flex);
+        @apply(--layout-horizontal);
+        @apply(--layout-center-center);
+      }
+
+      div#counter-up, div#counter-down {
+        @apply(--layout-flex-2);
+        @apply(--layout-horizontal);
+        @apply(--layout-center-center);
+      }
+
+      span, input {
+        @apply(--paper-font-body2);
+      }
+    </style>
+
+    <paper-card>
+      <div id="counter-down"><span>Hello World!</span></div>
+      <div id="counter"><span>Hello World!</span></div>
+      <div id="counter-up"><span>Hello World!</span></div>
+    </paper-card>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'score-pad',
+
+        properties: {
+          padColor: {
+            type: String,
+            value: 'black',
+            notify: true
+          }
+        },
+
+        ready: function(){
+          this.customStyle['--pad-background-color'] = this.padColor
+          this.updateStyles();
+        },
+
+        attributeChanged: function(){
+          this.customStyle['--pad-background-color'] = this.padColor
+          this.updateStyles();
+        }
+      });
+    })();
+  </script>
+</dom-module>
