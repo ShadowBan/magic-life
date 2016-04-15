@@ -12,6 +12,8 @@
         @apply(--layout-flex);
         display: block;
         --pad-background-color: white;
+        --base-text-color: white;
+        --base-text-size: 32px;
       }
 
       paper-card {
@@ -28,16 +30,36 @@
         transform: rotate(180deg);
       }
 
+      iron-icon {
+        --iron-icon-width: var(--base-text-size);
+        --iron-icon-height: var(--base-text-size);
+        --iron-icon-fill-color: var(--base-text-color);
+      }
+
       div#counter {
         @apply(--layout-flex);
         @apply(--layout-horizontal);
         @apply(--layout-center-center);
       }
 
+      div#counter span {
+        font-size: var(--base-text-size);
+        color: var(--base-text-color);
+      }
+
       div#counter-up, div#counter-down {
         @apply(--layout-flex-2);
         @apply(--layout-horizontal);
         @apply(--layout-center-center);
+      }
+
+      div#counter-up {
+        border-left: 1px solid white;
+       
+      } 
+
+      div#counter-down {
+        border-right: 1px solid white;
       }
 
       span, input {
