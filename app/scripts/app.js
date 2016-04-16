@@ -17,9 +17,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   app.displayInstalledToast = function() {
     // Check to make sure caching is actually enabled—it won't be in the dev environment.
+    console.log(!Polymer.dom(document).querySelector('platinum-sw-cache').disabled);
     if (!Polymer.dom(document).querySelector('platinum-sw-cache').disabled) {
       Polymer.dom(document).querySelector('#caching-complete').show();
     }
   };
+
+  app.displayErrorToast = function() {
+    console.log("Error loading stuff");
+    Polymer.dom(document).querySelector('#caching-error').show();
+  }
+
+
 
 })(document);
