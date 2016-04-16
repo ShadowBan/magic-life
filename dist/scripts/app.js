@@ -1,1 +1,1 @@
-!function(e){"use strict";e.querySelector("#app")}(document);
+!function(e){"use strict";var o=e.querySelector("#app");o.displayInstalledToast=function(){Polymer.dom(e).querySelector("platinum-sw-cache").disabled||Polymer.dom(e).querySelector("#caching-complete").show()}}(document);
