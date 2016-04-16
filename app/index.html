@@ -92,7 +92,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                           skip-waiting
                           base-uri="bower_components/platinum-sw/bootstrap"
                           on-service-worker-error="displayErrorToast"
-                          on-service-worker-installed="displayInstalledToast">
+                          on-service-worker-installed="displayInstalledToast"
+                          service-worker-updated="displayInstalledToast">
       <platinum-sw-cache default-cache-strategy="fastest" cache-config-file="cache-config.json"></platinum-sw-cache>
     </platinum-sw-register>
 
