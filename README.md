@@ -12,10 +12,9 @@ An example of this app deployed can be found at: https://cryptcounter.cipherden.
 Requirements
 ------------
 
-magic-life requires the following to run:
+magic-life is a client side html / css / js application and requires no server side dependancies.
 
-  * [Node.js][node] 0.10+
-  * [npm][npm] (normally comes with Node.js)
+The latest build can be found in the [/dist/](https://github.com/ShadowBan/magic-life/tree/master/dist) folder
 
 
 Usage
@@ -25,7 +24,7 @@ Usage
 Contributing
 ------------
 
-To contribute to magic-life, clone this repo locally and commit your code on a separate branch. Then please open a pull-request:
+To contribute to magic-life, clone this repo locally and commit your code on a separate branch. Then please open a pull-request
 
 
 License
